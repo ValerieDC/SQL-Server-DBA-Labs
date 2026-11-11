@@ -38,37 +38,32 @@ Desarrollar habilidades prácticas de administración de bases de datos y docume
 
 **Conceptos trabajados:** archivos MDF, NDF y LDF, filegroups y crecimiento automático.
 
-### 3. Respaldos de bases de datos
+### Respaldos automatizados con SQL Server Agent
 
-- Ejecución de respaldos completos.
-- Ejecución de respaldos diferenciales.
-- Ejecución de respaldos del registro de transacciones.
-- Generación de nombres de archivo con fecha y hora.
+Creación y configuración de tres jobs para ejecutar respaldos de AdventureWorks2022 de forma automática:
 
-Ejemplo de nomenclatura:
+| Job | Tipo de respaldo | Programación |
+|-----|------------------|--------------|
+| Backup Full | Completo | Cada hora |
+| Backup Diff | Diferencial | Cada 30 minutos |
+| Backup Log | Registro de transacciones | Cada 5 a 10 minutos |
 
-```text
-AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.bak
-AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.dif
-AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.trn
-```
+Actividades realizadas:
 
-### 4. Automatización con SQL Server Agent
+- Elaboración de scripts T-SQL para los respaldos FULL, DIFFERENTIAL y LOG.
+- Creación de un job independiente para cada tipo de respaldo.
+- Configuración de los pasos de ejecución y calendarios de cada job.
+- Generación automática de nombres de archivo con fecha y hora.
+- Revisión del historial de ejecución y de los archivos generados.
+- Deshabilitación de los jobs al finalizar las pruebas para controlar el consumo de almacenamiento.
 
-- Creación de jobs para ejecutar respaldos.
-- Configuración de pasos y programaciones.
-- Revisión del historial y estado de ejecución.
-- Habilitación y deshabilitación de jobs para controlar el consumo de espacio del laboratorio.
+Ejemplos de nombres de archivo:
 
-Programaciones utilizadas en la práctica:
+- `AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.bak`
+- `AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.dif`
+- `AdventureWorks2022-YYYY-MM-DD_HH-MM-SS.trn`
 
-| Tipo de respaldo | Frecuencia configurada |
-|------------------|------------------------|
-| Completo | Cada hora |
-| Diferencial | Cada 30 minutos |
-| Registro de transacciones | Cada 5 a 10 minutos |
-
-Estas frecuencias se utilizaron con fines de aprendizaje. Una estrategia de producción debe definirse según los requisitos de recuperación, la carga de trabajo y el almacenamiento disponible.
+Las frecuencias se configuraron con fines de práctica en un entorno de laboratorio.
 
 ### 5. Configuración de Database Mail
 
