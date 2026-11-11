@@ -2,7 +2,7 @@
 
 # Laboratorio de Administración de Bases de Datos con SQL Server
 
-Repositorio de prácticas de administración de bases de datos, enfocado en backups, resroe, automatización, almacenamiento y notificaciones con Microsoft SQL Server.
+Repositorio de prácticas de administración de bases de datos, enfocado en backups, restore, automatización, almacenamiento y notificaciones con Microsoft SQL Server.
 
 Los ejercicios se realizaron en un entorno local de laboratorio utilizando AdventureWorks2022.
 
