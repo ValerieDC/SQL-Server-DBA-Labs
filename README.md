@@ -2,7 +2,7 @@
 
 # Laboratorio de Administración de Bases de Datos con SQL Server
 
-Repositorio de prácticas de administración de bases de datos, enfocado en respaldos, automatización, almacenamiento y notificaciones con Microsoft SQL Server.
+Repositorio de prácticas de administración de bases de datos, enfocado en backups, resroe, automatización, almacenamiento y notificaciones con Microsoft SQL Server.
 
 Los ejercicios se realizaron en un entorno local de laboratorio utilizando AdventureWorks2022.
 
@@ -38,11 +38,11 @@ Desarrollar habilidades prácticas de administración de bases de datos y docume
 
 **Conceptos trabajados:** archivos MDF, NDF y LDF, filegroups y crecimiento automático.
 
-### Respaldos automatizados con SQL Server Agent
+### 3. Backups automatizados con SQL Server Agent
 
-Creación y configuración de tres jobs para ejecutar respaldos de AdventureWorks2022 de forma automática:
+Creación y configuración de tres jobs para ejecutar backups de AdventureWorks2022 de forma automática:
 
-| Job | Tipo de respaldo | Programación |
+| Job | Tipo de backup | Programación |
 |-----|------------------|--------------|
 | Backup Full | Completo | Cada hora |
 | Backup Diff | Diferencial | Cada 30 minutos |
@@ -50,8 +50,8 @@ Creación y configuración de tres jobs para ejecutar respaldos de AdventureWork
 
 Actividades realizadas:
 
-- Elaboración de scripts T-SQL para los respaldos FULL, DIFFERENTIAL y LOG.
-- Creación de un job independiente para cada tipo de respaldo.
+- Elaboración de scripts T-SQL para los backups FULL, DIFFERENTIAL y LOG.
+- Creación de un job independiente para cada tipo de backup.
 - Configuración de los pasos de ejecución y calendarios de cada job.
 - Generación automática de nombres de archivo con fecha y hora.
 - Revisión del historial de ejecución y de los archivos generados.
@@ -65,13 +65,13 @@ Ejemplos de nombres de archivo:
 
 Las frecuencias se configuraron con fines de práctica en un entorno de laboratorio.
 
-### 5. Configuración de Database Mail
+### 4. Configuración de Database Mail
 
 - Configuración de una cuenta y un perfil de correo.
 - Configuración del servidor SMTP.
 - Envío y recepción de un correo de prueba.
 
-### 6. Consulta de metadatos y almacenamiento
+### 5. Consulta de metadatos y almacenamiento
 
 - Consultas sobre columnas y esquemas mediante vistas de catálogo como `sys.columns` y `sys.schemas`.
 - Generación de reportes de uso de disco.
